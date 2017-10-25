@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">VSSK</string>
+
+    <string name="default_layout">Visuomenės sveikatos saugos kontrolės m-sistema</string>
+
+    <string name="button_pradeti_kontrole">Pradėti kontrolę</string>
+
+    <string name="specialist_name">Prisijungimo vardas</string>
+    <string name="specialist_password">Slaptažodis</string>
+    <string name="remember_me">Prisiminti mane</string>
+    <string name="radiobutton_sporto_klubas">Sporto klubas</string>
+    <string name="radiobutton_kirpykla">Kirpykla</string>
+    <string name="radiobutton_sklabukla">Skalbykla</string>
+    <string name="radiobutton_baseinas">Baseinas</string>
+    <string name="radiobutton_select">Pasirinkite kontroliuojamą veiklą:</string>
+
+    <string name="juridinio_asmens_pavadinimas">Juridinio asmens pavadinimas</string>
+    <string name="juridinio_asmens_kodas">Kodas</string>
+    <string name="juridinio_asmens_adresas">Veiklos vykdymo adresas</string>
+
+
+    <string name="kl_1">1. Teikiamos paslaugos atitinka leidime-higienos pase ir Ūkinės komercinės
+        veiklos vykdymo sąlygų vertinimo pažymoje nurodytas paslaugas ir sąlygas </string>
+    <string name="kl_2">2. Sporto klubo paslaugų teikėjo parengtos vidaus tvarkos taisyklės
+        skelbiamos gerai paslaugų vartotojams matomoje paslaugų teikimo vietoje </string>
+    <string name="kl_3">3. Sporto klube yra pirmosios pagalbos rinkinys  </string>
+    <string name="kl_4">4. Pirmosios pagalbos rinkinio sudėtis atitinka Įmonės pirmosios pagalbos
+        rinkinio aprašymą  </string>
+    <string name="kl_5">5. Stacionarios įrangos, įrenginių naudojimo instrukcijos  </string>
+    <string name="kl_6">6. Darbuotojai turi sveikatos žinių ir įgūdžių atestavimo pažymėjimus, patvirtinančius,
+        kad jie yra išklausę privalomuosius pirmosios pagalbos teikimo kursus  </string>
+    <string name="kl_7">7. Sporto klubo paslaugų teikimo patalpose esantys įrenginiai technškai
+        tavrkingi  </string>
+    <string name="kl_8">8. Sporto klubo patalpoje (-ose) pratyboms (užsiėmimams) yra tik
+        pratyboms (užsiėmimams) reikiama įranga ir inventorius  </string>
+    <string name="kl_9">9. Sporto klubo patalpose, kuriose vyksta pratybos, yra įrangai,
+        įrenginiams, inventoriui valyti skirtų priemonių, kuriomis gali naudotis sporto klubo
+        paslaugų vartotojai   </string>
+    <string name="kl_10">10.Karštas vanduo tiekiamas į dušo patalpas, tualetuose įrengtas praustuves  </string>
+    <string name="kl_11">11. Persirengimo patalpoms, dušams, tualetams dezinfekuoti
+        yra autorizuotų biocidinių produktų   </string>
+    <string name="kl_12">12. Patalpoms, įrangai, inventoriui valyti skirtos
+        priemonės naudojamos pagal paskirtį ir jų gamintojo instrukcijas  </string>
+    <string name="kl_13">13. Patalpoms, įrangai, inventoriui valyti skirtos priemonės
+        naudojamos pagal paskirtį ir jų gamintojo instrukcijas   </string>
+    <string name="kl_14">14. Kas 3 mėnesius karšto vandens tiekimo sistemoje vandens
+        temperatūra profilaktiškai pakeliama iki ne žemesnės kaip 66 °C temperatūros ir išlaikoma ne trumpiau kaip 25 min.   </string>
+    <string name="kl_15">15. Sporto klubo paslaugų teikėjas ne rečiau kaip vieną kartą per
+        metus atlieka geriamojo vandens (šalto ir karšto) mikrobiologinį tyrimą legionelėms nustatyti  </string>
+    <string name="kl_16">16. 1 l vandens radus daugiau nei 10 000 legionelių, buvo patikrinta,
+        išvalyta vandens tiekimo sistema, pašalintas jos kenksmingumas, koreguotos esamos ir / ar imtasi naujų legioneliozės profilaktikos priemonių  </string>
+    <string name="kl_17">17. Karšto geriamojo vandens čiaupe temperatūra
+        (išmatavus temperatūrą po 1 min., kai buvo atsuktas čiaupas ir paleistas vanduo) –
+        aukštesnė kaip 50 °C </string>
+    <string name="kl_18">18. Šalto geriamojo vandens čiaupe temperatūra
+        (išmatavus temperatūrą po 2 min., kai buvo atsuktas čiaupas ir paleistas vanduo) – žemesnė kaip 20 °C   </string>
+
+    <string-array name="veikla">
+        <item>Veikla</item>
+        <item>Sporto klybas</item>
+        <item>Baseinas</item>
+        <item>Kirpykla</item>
+        <item>Skalbykla</item>
+        <item>Mokykla</item>
+        <item>Darželis</item>
+        <item>Gydymo įstaiga</item>
+    </string-array>
+
+
+</resources>

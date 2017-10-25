@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.aurimas.inspektorius.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Bendra informacija"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:textColor="@android:color/black"
+        android:textSize="15dp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <EditText
+        android:id="@+id/pavadinimas"
+        android:textSize="30px"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/juridinio_asmens_pavadinimas"
+        android:textAlignment="center"
+        android:layout_alignParentLeft="true"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/kodas"
+        android:textSize="30px"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/juridinio_asmens_kodas"
+        android:textAlignment="center"
+        android:layout_alignParentRight="true"
+        android:inputType="number"/>
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/adresas"
+        android:textSize="30px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/juridinio_asmens_adresas"
+        android:textAlignment="center"
+        android:inputType="text"/>
+
+    <RelativeLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/tel_nr"
+        android:textSize="30px"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:hint="telefono nr."
+        android:textAlignment="center"
+        android:layout_alignParentLeft="true"
+        android:inputType="numberDecimal"/>
+
+    <EditText
+        android:id="@+id/el_pastas"
+        android:textSize="30px"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:hint="el. pastas"
+        android:textAlignment="center"
+        android:inputType="textEmailAddress"
+        android:layout_alignParentRight="true"
+        />
+    </RelativeLayout>
+    <EditText
+        android:id="@+id/atsakingo_pareigos"
+        android:textSize="30px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Atsakingo asmens pareigos"
+        android:textAlignment="center"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/atsakingo_vp"
+        android:textSize="30px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="vardas, pavardė"
+        android:textAlignment="center"
+        android:inputType="text"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Klausimynas"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:textColor="@android:color/black"
+        android:textSize="15dp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <TextView
+        android:text="@string/kl_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30px"
+        />
+
+    <RadioGroup
+        android:id="@+id/pasirinkimas"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation='horizontal'>
+
+        <RadioButton
+            android:layout_gravity="center"
+            android:id="@+id/taip"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Taip"/>
+
+        <RadioButton
+            android:layout_gravity="center"
+            android:id="@+id/ne"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Ne"/>
+
+        <RadioButton
+            android:layout_gravity="center"
+            android:id="@+id/netikrinta"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Netikrinta"/>
+    </RadioGroup>
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+    <TextView
+        android:text="@string/kl_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30px"
+        />
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+    <TextView
+        android:text="@string/kl_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30px"
+        />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+    <TextView
+        android:text="@string/kl_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30px"
+        />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+    <TextView
+        android:text="@string/kl_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30px"
+        />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+    <TextView
+        android:text="@string/kl_6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30px"
+        />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+    <TextView
+        android:text="@string/kl_7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30px"
+        />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+    <TextView
+        android:text="@string/kl_8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30px"
+        />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+    <TextView
+        android:text="@string/kl_9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30px"
+        />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+    <TextView
+        android:text="@string/kl_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30px"
+        />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+    <TextView
+        android:text="@string/kl_11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30px"
+        />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+    <TextView
+        android:text="@string/kl_12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30px"
+        />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+    <TextView
+        android:text="@string/kl_13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30px"
+        />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+    <TextView
+        android:text="@string/kl_14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30px"
+        />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+    <TextView
+        android:text="@string/kl_15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30px"
+        />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+    <TextView
+        android:text="@string/kl_16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30px"
+        />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+    <TextView
+        android:text="@string/kl_17"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30px"
+        />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+    <TextView
+        android:text="@string/kl_18"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30px"
+        />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+
+    <EditText
+        android:id="@+id/pastabos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Pastabos (komentarai)"
+        android:textAlignment="center"
+        android:inputType="text"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <Button
+        android:id="@+id/baigti_kontrole"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:text="Baigti patikrinimą"
+        android:layout_gravity="center"
+        android:textAllCaps="false"
+        android:layout_alignParentLeft="true"
+        android:textColor="@android:color/black"/>
+
+    <Button
+        android:id="@+id/siusti_akta"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:text="Siųsti el. paštu"
+        android:layout_gravity="center"
+        android:textAllCaps="false"
+        android:layout_alignParentRight="true"
+        android:textColor="@android:color/black"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
+
+</ScrollView>
