@@ -5,8 +5,8 @@ package com.example.aurimas.inspektorius;
  */
 
 public class Klausimas {
-     int klausimas;
-     int atsakymas;
+    private int klausimas;
+    private int atsakymas;
 
     public int getKlausimas() {
         return klausimas;

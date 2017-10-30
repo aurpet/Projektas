@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_width="290dp"
         android:layout_gravity="center"
-        android:hint="@string/specialist_name"
+        android:hint="@string/login_name"
         android:textAlignment="center"
         android:inputType="text"/>
 
@@ -50,7 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_width="290dp"
         android:layout_gravity="center"
-        android:hint="@string/specialist_password"
+        android:hint="@string/login_password"
         android:textAlignment="center"
         android:inputType="textPassword" />
 

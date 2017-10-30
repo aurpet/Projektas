@@ -45,17 +45,16 @@ public class SportoKlubas extends AppCompatActivity {
             View view = View.inflate(this, R.layout.klausimynas, null);
             TextView textView = (TextView) view.findViewById(R.id.klausimas);
             textView.setText(klausimas.getKlausimas());
-            RadioButton radioButton = (RadioButton) view.findViewById(R.id.taip);
-            radioButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            RadioButton t = (RadioButton) view.findViewById(R.id.taip);
+            t.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     klausimas.setAtsakymas(0);
                     Toast.makeText(SportoKlubas.this, klausimas.getKlausimas(), Toast.LENGTH_SHORT).show();
                 }
             });
+
             klausimai.addView(view);
-
-
         }
 
     }

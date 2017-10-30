@@ -5,8 +5,8 @@
 
     <string name="button_pradeti_kontrole">Pradėti kontrolę</string>
 
-    <string name="specialist_name">Prisijungimo vardas</string>
-    <string name="specialist_password">Slaptažodis</string>
+    <string name="login_name">Prisijungimo vardas</string>
+    <string name="login_password">Slaptažodis</string>
     <string name="remember_me">Prisiminti mane</string>
     <string name="radiobutton_sporto_klubas">Sporto klubas</string>
     <string name="radiobutton_kirpykla">Kirpykla</string>
