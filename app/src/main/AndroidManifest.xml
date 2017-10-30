@@ -18,7 +18,12 @@
         </activity>
         <activity
             android:name=".SportoKlubas"
-            android:label="Sporto klubas"></activity>
+            android:label="Sporto klubas" />
+        <activity android:name=".Baseinas"
+                android:label="Baseinas"/>
+        <activity android:name=".Kirpykla"
+            android:label="Kirpykla">
+        </activity>
     </application>
 
 </manifest>

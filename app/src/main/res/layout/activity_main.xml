@@ -75,36 +75,45 @@
         android:textColor="@android:color/black"
         android:textSize="15dp" />
 
-    <RadioGroup
-        android:id="@+id/radiogroup_check"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+    </Spinner>
 
-        <RadioButton
-            android:layout_gravity="center"
-            android:id="@+id/radiobutton_sporto_klubas"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:checked="false"
-            android:text="@string/radiobutton_sporto_klubas"/>
+    <!--<RadioGroup-->
+        <!--android:id="@+id/radiogroup_check"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
 
-        <RadioButton
-            android:layout_gravity="center"
-            android:id="@+id/radiobutton_baseinas"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:checked="false"
-            android:text="@string/radiobutton_baseinas"/>
+        <!--<RadioButton-->
+            <!--android:layout_gravity="center"-->
+            <!--android:id="@+id/radiobutton_sporto_klubas"-->
+            <!--android:layout_width="150dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:checked="false"-->
+            <!--android:text="@string/radiobutton_sporto_klubas"/>-->
 
-        <RadioButton
-            android:layout_gravity="center"
-            android:id="@+id/radiobutton_kirpykla"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:checked="false"
-            android:text="@string/radiobutton_kirpykla"/>
+        <!--<RadioButton-->
+            <!--android:layout_gravity="center"-->
+            <!--android:id="@+id/radiobutton_baseinas"-->
+            <!--android:layout_width="150dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:checked="false"-->
+            <!--android:text="@string/radiobutton_baseinas"/>-->
 
-    </RadioGroup>
+        <!--<RadioButton-->
+            <!--android:layout_gravity="center"-->
+            <!--android:id="@+id/radiobutton_kirpykla"-->
+            <!--android:layout_width="150dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:checked="false"-->
+            <!--android:text="@string/radiobutton_kirpykla"/>-->
+
+    <!--</RadioGroup>-->
+    <!---->
+
 
     <Space
         android:layout_width="match_parent"

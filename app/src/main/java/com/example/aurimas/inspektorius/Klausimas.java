@@ -24,7 +24,6 @@ public class Klausimas {
         this.atsakymas = atsakymas;
     }
 
-
     public Klausimas(int klausimas, int atsakymas) {
         this.klausimas = klausimas;
         this.atsakymas = atsakymas;
