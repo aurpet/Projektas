@@ -19,6 +19,7 @@
     <string name="juridinio_asmens_adresas">Veiklos vykdymo adresas</string>
 
 
+    <!-- Klausimynas sporto klubui -->
     <string name="kl_1">1. Teikiamos paslaugos atitinka leidime-higienos pase ir Ūkinės komercinės
         veiklos vykdymo sąlygų vertinimo pažymoje nurodytas paslaugas ir sąlygas </string>
     <string name="kl_2">2. Sporto klubo paslaugų teikėjo parengtos vidaus tvarkos taisyklės
@@ -55,16 +56,45 @@
     <string name="kl_18">18. Šalto geriamojo vandens čiaupe temperatūra
         (išmatavus temperatūrą po 2 min., kai buvo atsuktas čiaupas ir paleistas vanduo) – žemesnė kaip 20 °C   </string>
 
-    <string-array name="veikla">
-        <item>Veikla</item>
-        <item>Sporto klybas</item>
-        <item>Baseinas</item>
-        <item>Kirpykla</item>
-        <item>Skalbykla</item>
-        <item>Mokykla</item>
-        <item>Darželis</item>
-        <item>Gydymo įstaiga</item>
-    </string-array>
+    <!-- Klausimynas baseinui: -->
+    <string name="k2_1">1. Teikiamos paslaugos atitinka leidime-higienos pase ir Ūkinės komercinės
+        veiklos vykdymo sąlygų vertinimo pažymoje nurodytas paslaugas ir sąlygas </string>
+    <string name="k2_2">2. Gerai baseino paslaugų vartotojui matomoje vietoje yra: informacija apie teikiamas
+        paslaugas </string>
+    <string name="k2_3">3. Baseine ryškiai pažymėtos vietos, kur baseino gylis didesnis nei 1 m  </string>
+    <string name="k2_4">4. Pirmosios pagalbos rinkinio sudėtis atitinka Įmonės pirmosios pagalbos rinkinio aprašymą </string>
+    <string name="k2_5">5. Kiekvienam paslaugų vartotojui tiekiami tik išskalbti, išlyginti ir po to
+        kitų paslaugų vartotojų nenaudoti skalbiniai  </string>
+    <string name="k2_6">6. Baseino, persirengimo, dušo, tualeto patalpų grindų, laiptų danga neslidi,
+        tinkama valyti drėgnai, lygi (be pavojingų įdubimų, iškilimų, angų, įplyšimų, įskilimų) </string>
+    <string name="k2_7">7. Baseine esančios angos, į kurias gali būti įtrauktas paslaugų vartotojas
+        ar jo kūno dalys, uždengtos apsauginėmis grotelėmis, kurių tarpai ne didesni nei 0,8 cm, ar
+        kitais apsauginiais įtaisais  </string>
+    <string name="k2_8">8. Karštas vanduo tiekiamas į: tualete (-uose) įrengtas praustuves </string>
+    <string name="k2_9">9. Baseino patalpos, įranga, įrenginiai, inventorius švarūs (nėra akivaizdžiai matomų nešvarumų)</string>
+    <string name="k2_10">10. Baseino vanduo skaidrus (gerai matomas baseino dugnas) </string>
+
+    <!-- Klausimynas kipyklai: -->
+    <string name="k3_1">1. Teikiamos paslaugos atitinka leidime-higienos pase ir Ūkinės komercinės
+        veiklos vykdymo sąlygų vertinimo pažymoje nurodytas paslaugas ir sąlygas </string>
+    <string name="k3_2">2. Instrumentai valomi ir dezinfekuojami instrumentų valymo, dezinfekcijos
+        patalpoje (zonoje), kurioje yra: praustuvė instrumentams plauti </string>
+    <string name="k3_3">3. Teikiant paslaugą kiekvienam paslaugų vartotojui naudojami švarūs,
+        kitiems vartotojams nenaudoti, ar vienkartiniai užtiesalai  </string>
+    <string name="k3_4">4. Paviršiai, prie kurių tiesiogiai (oda, plaukai) liečiasi paslaugų
+        vartotojas teikiant jam grožio paslaugą, dengiami vienkartiniu užtiesalu arba valomi ir
+        dezinfekuojami po kiekvieno paslaugų vartotojo  </string>
+    <string name="k3_5">5. Švarūs skalbiniai laikomi jiems skirtoje švarioje uždaroje spintoje
+        arba talpykloje  </string>
+    <string name="k3_6">6. Paruošti naudoti instrumentai laikomi tam skirtoje švarioje, uždengtoje talpykloje  </string>
+    <string name="k3_7">7. Vienkartiniai instrumentai naudojami vieną kartą  </string>
+    <string name="k3_8">8. Paslaugoms teikti naudojami tik dezinfekuoti daugkartiniai instrumentai </string>
+    <string name="k3_9">9. Įranga, prietaisai, valymo, dezinfekcijos įrenginiai naudojami pagal
+        gamintojo rekomendacijas  </string>
+    <string name="k3_10">10. Grožio paslaugų teikėjas turi įrangos, prietaisų, valymo, dezinfekcijos
+        įrenginių naudojimo aprašymus lietuvių kalba  </string>
+
+
 
 
 </resources>

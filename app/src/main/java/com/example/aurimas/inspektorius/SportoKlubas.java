@@ -7,9 +7,7 @@ import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 
@@ -18,7 +16,7 @@ public class SportoKlubas extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sporto_klubas);
+        setContentView(R.layout.kontroles_langas);
 
         klausimai = (LinearLayout) findViewById(R.id.klausimai);
 
@@ -50,7 +48,6 @@ public class SportoKlubas extends AppCompatActivity {
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     klausimas.setAtsakymas(0);
-                    Toast.makeText(SportoKlubas.this, klausimas.getKlausimas(), Toast.LENGTH_SHORT).show();
                 }
             });
 

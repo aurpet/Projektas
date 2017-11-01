@@ -42,14 +42,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void login() {
+
         this.username = (EditText) findViewById(R.id.login_name);
         this.password = (EditText) findViewById(R.id.login_password);
 
         Button submit = (Button) findViewById(R.id.pradeti_kontrole);
+
         rememberMeCheckBox = (CheckBox) findViewById(R.id.login_remember_me);
         final User user = new User(getApplicationContext());
         rememberMeCheckBox.setChecked(user.isRemembered());
-
 
         if (user.isRemembered()) {
             username.setText(user.getPasswordForLogin(), TextView.BufferType.EDITABLE);
@@ -63,6 +64,11 @@ public class MainActivity extends AppCompatActivity {
             Authentication authentication = new Authentication();
 
             public void onClick(View focusView) {
+
+                Vartotojas aurimas = new Vartotojas("aurimas", "aurimas");
+                Vartotojas kamile = new Vartotojas("kamile", "kamile");
+
+
                 String username2 = username.getText().toString();
                 String password2 = password.getText().toString();
                 boolean cancel = false;
@@ -80,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                 if (cancel) {
                     focusView.requestFocus();
                 } else {
-                    Toast.makeText(MainActivity.this, username2 + "\n" + password2,
+                    Toast.makeText(MainActivity.this, "Prisijungėte sėkmingai",
                             Toast.LENGTH_LONG).show();
 
                     if (rememberMeCheckBox.isChecked()) {
@@ -99,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
                         Intent goToKirpykla = new Intent(MainActivity.this, Kirpykla.class);
                         startActivity(goToKirpykla);
                     } else {
-                        Toast.makeText(MainActivity.this, "Nepasirinktas patikrinimo objetas",
+                        Toast.makeText(MainActivity.this, "Nepasirinkta kontroliuojama veikla",
                                 Toast.LENGTH_LONG).show();
                     }
                 }
