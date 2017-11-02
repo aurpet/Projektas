@@ -5,8 +5,10 @@ package com.example.aurimas.inspektorius;
  */
 
 public class Klausimas {
+    private int punktas;
+
     private int klausimas;
-    private int atsakymas;
+    private Atsakymas atsakymas;
 
     public int getKlausimas() {
         return klausimas;
@@ -16,16 +18,16 @@ public class Klausimas {
         this.klausimas = klausimas;
     }
 
-    public int getAtsakymas() {
+    public Atsakymas getAtsakymas() {
         return atsakymas;
     }
 
-    public void setAtsakymas(int atsakymas) {
+    public void setAtsakymas(Atsakymas atsakymas) {
         this.atsakymas = atsakymas;
     }
 
-    public Klausimas(int klausimas, int atsakymas) {
+    public Klausimas(int klausimas) {
         this.klausimas = klausimas;
-        this.atsakymas = atsakymas;
+        this.atsakymas = Atsakymas.NETIKRINTA;
     }
 }

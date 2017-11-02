@@ -65,8 +65,10 @@ public class MainActivity extends AppCompatActivity {
 
             public void onClick(View focusView) {
 
-                Vartotojas aurimas = new Vartotojas("aurimas", "aurimas");
-                Vartotojas kamile = new Vartotojas("kamile", "kamile");
+
+                // users data who can to login
+                LoginUser aurimas = new LoginUser("aurimas", "aurimas");
+                LoginUser kamile = new LoginUser("kamile", "kamile");
 
 
                 String username2 = username.getText().toString();
