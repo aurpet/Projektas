@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
@@ -20,6 +21,18 @@ public class Kirpykla extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.kontroles_langas);
+
+        Button exit = (Button) findViewById(R.id.baigti_kontrole);
+        exit.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                finish();
+                System.exit(0);
+            }
+        });
+
+
         klausimai = (LinearLayout) findViewById(R.id.klausimai);
 
         ArrayList<Klausimas> kl = new ArrayList<>();
@@ -43,9 +56,9 @@ public class Kirpykla extends AppCompatActivity {
                 @Override
                 public void onCheckedChanged(RadioGroup group, int checkedId) {
                     klausimas.setAtsakymas(Atsakymas.fromId(checkedId));
-                    Log.d("BASEINAS", "Klausimas: " + getString(klausimas.getKlausimas()));
-                    Log.d("BASEINAS", "Pasirinktas atsakymas: " + klausimas.getAtsakymas().name());
-                    Log.d("BASEINAS", new Date().toString());
+                    Log.d("KIRPYKLA", "Klausimas: " + getString(klausimas.getKlausimas()));
+                    Log.d("KIRPYKLA", "Pasirinktas atsakymas: " + klausimas.getAtsakymas().name());
+                    Log.d("KIRPYKLA", new Date().toString());
                 }
             });
             klausimai.addView(view);

@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText password;
     private CheckBox rememberMeCheckBox;
     private Spinner kontrole;
+    private Button pradeti;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

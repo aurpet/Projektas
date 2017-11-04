@@ -9,7 +9,6 @@ import java.util.regex.Matcher;
 public class Authentication { Authentication() {
 }
 
-
     public boolean isValidCredentials(String credentials) {
         final String CREDENTIALS_PATTERN = "^([0-9a-zA-Z]{3,25})+$";
         java.util.regex.Pattern pattern = java.util.regex.Pattern.compile(CREDENTIALS_PATTERN);

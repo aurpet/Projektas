@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
@@ -21,6 +22,17 @@ public class SportoKlubas extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.kontroles_langas);
 
+        Button exit = (Button) findViewById(R.id.baigti_kontrole);
+        exit.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                finish();
+                System.exit(0);
+            }
+        });
+
+
         klausimai = (LinearLayout) findViewById(R.id.klausimai);
 
         ArrayList<Klausimas> kl = new ArrayList<>();
@@ -34,12 +46,13 @@ public class SportoKlubas extends AppCompatActivity {
         kl.add(new Klausimas(R.string.kl_8));
         kl.add(new Klausimas(R.string.kl_9));
         kl.add(new Klausimas(R.string.kl_10));
-        kl.add(new Klausimas(R.string.kl_1));
-        kl.add(new Klausimas(R.string.kl_1));
-        kl.add(new Klausimas(R.string.kl_1));
-        kl.add(new Klausimas(R.string.kl_1));
-        kl.add(new Klausimas(R.string.kl_1));
-        kl.add(new Klausimas(R.string.kl_1));
+        kl.add(new Klausimas(R.string.kl_11));
+        kl.add(new Klausimas(R.string.kl_12));
+        kl.add(new Klausimas(R.string.kl_13));
+        kl.add(new Klausimas(R.string.kl_14));
+        kl.add(new Klausimas(R.string.kl_15));
+        kl.add(new Klausimas(R.string.kl_16));
+        kl.add(new Klausimas(R.string.kl_17));
         kl.add(new Klausimas(R.string.kl_18));
 
         for (final Klausimas klausimas : kl) {
@@ -51,9 +64,9 @@ public class SportoKlubas extends AppCompatActivity {
                 @Override
                 public void onCheckedChanged(RadioGroup group, int checkedId) {
                     klausimas.setAtsakymas(Atsakymas.fromId(checkedId));
-                    Log.d("BASEINAS", "Klausimas: " + getString(klausimas.getKlausimas()));
-                    Log.d("BASEINAS", "Pasirinktas atsakymas: " + klausimas.getAtsakymas().name());
-                    Log.d("BASEINAS", new Date().toString());
+                    Log.d("SportoKlubas", "Klausimas: " + getString(klausimas.getKlausimas()));
+                    Log.d("SportoKlubas", "Pasirinktas atsakymas: " + klausimas.getAtsakymas().name());
+                    Log.d("SportoKlubas", new Date().toString());
                 }
             });
             klausimai.addView(view);
@@ -62,6 +75,5 @@ public class SportoKlubas extends AppCompatActivity {
 
             }
         }
-
     }
 }
