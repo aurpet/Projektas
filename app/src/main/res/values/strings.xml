@@ -5,8 +5,8 @@
 
     <string name="button_pradeti_kontrole">Pradėti kontrolę</string>
 
-    <string name="login_name">Prisijungimo vardas</string>
-    <string name="login_password">Slaptažodis</string>
+    <string name="login_name">Vardas</string>
+    <string name="login_password">Pavardė</string>
     <string name="remember_me">Prisiminti mane</string>
     <string name="radiobutton_sporto_klubas">Sporto klubas</string>
     <string name="radiobutton_kirpykla">Kirpykla</string>
@@ -20,6 +20,28 @@
 
 
     <!-- Klausimynas sporto klubui -->
+
+    <string name="hn">HN123:2013</string>
+    <string name="p1">4,</string>
+    <string name="p2">5,</string>
+    <string name="p3">8,</string>
+    <string name="p4">8,</string>
+    <string name="p5">33,</string>
+    <string name="p6">6,</string>
+    <string name="p7">13,</string>
+    <string name="p8">15,</string>
+    <string name="p9">31,</string>
+    <string name="p10">26,</string>
+    <string name="p11">30,</string>
+    <string name="p12">31,</string>
+    <string name="p13">39,</string>
+    <string name="p14">33,</string>
+    <string name="p15">15,</string>
+    <string name="p16">34,</string>
+    <string name="p17">36,</string>
+    <string name="p18">25,</string>
+
+
     <string name="kl_1">1. Teikiamos paslaugos atitinka leidime-higienos pase ir Ūkinės komercinės
         veiklos vykdymo sąlygų vertinimo pažymoje nurodytas paslaugas ir sąlygas </string>
     <string name="kl_2">2. Sporto klubo paslaugų teikėjo parengtos vidaus tvarkos taisyklės
@@ -54,9 +76,25 @@
         (išmatavus temperatūrą po 1 min., kai buvo atsuktas čiaupas ir paleistas vanduo) –
         aukštesnė kaip 50 °C </string>
     <string name="kl_18">18. Šalto geriamojo vandens čiaupe temperatūra
-        (išmatavus temperatūrą po 2 min., kai buvo atsuktas čiaupas ir paleistas vanduo) – žemesnė kaip 20 °C   </string>
+        (išmatavus temperatūrą po 2 min., kai buvo atsuktas čiaupas ir paleistas vanduo) – žemesnė kaip 20 °C
+
+
+    </string>
 
     <!-- Klausimynas baseinui: -->
+
+    <string name="hng">HN 109:2016 </string>
+    <string name="b1">6,</string>
+    <string name="b2">24,</string>
+    <string name="b3">16,</string>
+    <string name="b4">28,</string>
+    <string name="b5">37,</string>
+    <string name="b6">32,</string>
+    <string name="b7">15,</string>
+    <string name="b8">15,</string>
+    <string name="b9">33,</string>
+    <string name="b10">34,</string>
+
     <string name="k2_1">1. Teikiamos paslaugos atitinka leidime-higienos pase ir Ūkinės komercinės
         veiklos vykdymo sąlygų vertinimo pažymoje nurodytas paslaugas ir sąlygas </string>
     <string name="k2_2">2. Gerai baseino paslaugų vartotojui matomoje vietoje yra: informacija apie teikiamas
@@ -75,6 +113,19 @@
     <string name="k2_10">10. Baseino vanduo skaidrus (gerai matomas baseino dugnas) </string>
 
     <!-- Klausimynas kipyklai: -->
+
+    <string name="hg">HN 117:2007</string>
+    <string name="k1">6,</string>
+    <string name="k2">24,</string>
+    <string name="k3">16,</string>
+    <string name="k4">28,</string>
+    <string name="k5">37,</string>
+    <string name="k6">32,</string>
+    <string name="k7">15,</string>
+    <string name="k8">15,</string>
+    <string name="k9">33,</string>
+    <string name="k10">34,</string>
+
     <string name="k3_1">1. Teikiamos paslaugos atitinka leidime-higienos pase ir Ūkinės komercinės
         veiklos vykdymo sąlygų vertinimo pažymoje nurodytas paslaugas ir sąlygas </string>
     <string name="k3_2">2. Instrumentai valomi ir dezinfekuojami instrumentų valymo, dezinfekcijos

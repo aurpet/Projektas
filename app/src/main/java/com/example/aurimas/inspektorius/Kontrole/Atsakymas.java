@@ -1,4 +1,6 @@
-package com.example.aurimas.inspektorius;
+package com.example.aurimas.inspektorius.Kontrole;
+
+import com.example.aurimas.inspektorius.R;
 
 /**
  * Created by Aurimas on 2017-11-02.

@@ -52,7 +52,7 @@
         android:layout_gravity="center"
         android:hint="@string/login_password"
         android:textAlignment="center"
-        android:inputType="textPassword" />
+        android:inputType="text" />
 
     <CheckBox
         android:id="@+id/login_remember_me"

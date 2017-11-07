@@ -3,6 +3,7 @@ package com.example.aurimas.inspektorius;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -12,20 +13,41 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.aurimas.inspektorius.Kontrole.Baseinas;
+import com.example.aurimas.inspektorius.Kontrole.Kirpykla;
+import com.example.aurimas.inspektorius.Kontrole.SportoKlubas;
+
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    private EditText username;
+    private EditText username, vardas, pavarde;
     private EditText password;
     private CheckBox rememberMeCheckBox;
     private Spinner kontrole;
-    private Button pradeti;
+    private Date dateStarted;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        dateStarted = new Date();
+
+
+        Button pradeti = (Button) findViewById(R.id.pradeti_kontrole);
+        pradeti.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                vardas = (EditText)findViewById(R.id.login_name);
+                pavarde = (EditText)findViewById(R.id.login_password);
+
+            }
+        });
 
         kontrole = (Spinner) findViewById(R.id.spinner1);
         List<String> listKontroles = new ArrayList<>();
@@ -49,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button submit = (Button) findViewById(R.id.pradeti_kontrole);
 
+
         rememberMeCheckBox = (CheckBox) findViewById(R.id.login_remember_me);
         final User user = new User(getApplicationContext());
         rememberMeCheckBox.setChecked(user.isRemembered());
@@ -67,9 +90,16 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View focusView) {
 
 
+                EditText vardas = (EditText) findViewById(R.id.login_name);
+                EditText pavarde = (EditText) findViewById(R.id.login_password);
+                Log.v("MainActivity", "Patikrinimą atliko: \nVisuomenės sveikatos saugos kontrolės skyriaus " +
+                        "vyr. specialistas " + vardas.getText().toString() + " " +
+                        pavarde.getText().toString() + "\nPatikrinimas pradėtas: " + dateStarted.toString());
+
+
                 // users data who can to login
-                LoginUser aurimas = new LoginUser("aurimas", "aurimas");
-                LoginUser kamile = new LoginUser("kamile", "kamile");
+//                LoginUser aurimas = new LoginUser("aurimas", "aurimas");
+//                LoginUser kamile = new LoginUser("kamile", "kamile");
 
 
                 String username2 = username.getText().toString();
@@ -77,12 +107,12 @@ public class MainActivity extends AppCompatActivity {
                 boolean cancel = false;
 
                 if (!authentication.isValidCredentials(username2)) {
-                    username.setError("Klaidingas prisijungimo vardas");
+                    username.setError("Klaidingas vardas");
                     focusView = username;
                     cancel = true;
                 }
                 if (!authentication.isValidCredentials(password2)) {
-                    password.setError("Klaidingas prisijungimo slaptažodis");
+                    password.setError("Klaidinga pavardė");
                     cancel = true;
                 }
 
