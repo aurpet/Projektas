@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">VSSK</string>
 
-    <string name="default_layout">Visuomenės sveikatos saugos kontrolės m-sistema</string>
+    <string name="default_layout">Visuomenės sveikatos saugos kontrolės e-sistema</string>
 
     <string name="button_pradeti_kontrole">Pradėti kontrolę</string>
 

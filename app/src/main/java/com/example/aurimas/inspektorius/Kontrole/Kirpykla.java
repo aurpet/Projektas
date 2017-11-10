@@ -1,7 +1,11 @@
 package com.example.aurimas.inspektorius.Kontrole;
 
-import android.support.v7.app.AppCompatActivity;
+import android.icu.text.SimpleDateFormat;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
+import android.support.annotation.RequiresApi;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -11,7 +15,16 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.example.aurimas.inspektorius.R;
+import com.itextpdf.kernel.pdf.PdfDocument;
+import com.itextpdf.kernel.pdf.PdfWriter;
+import com.itextpdf.layout.Document;
+import com.itextpdf.layout.element.Paragraph;
+import com.itextpdf.layout.element.Text;
+import com.itextpdf.layout.property.TextAlignment;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -44,6 +57,7 @@ public class Kirpykla extends AppCompatActivity {
         Button exit = (Button) findViewById(R.id.baigti_kontrole);
         exit.setOnClickListener(new View.OnClickListener() {
 
+            @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public void onClick(View v) {
                 EditText pavadinimas = (EditText) findViewById(R.id.pavadinimas);
@@ -54,6 +68,9 @@ public class Kirpykla extends AppCompatActivity {
                 EditText pareigos = (EditText) findViewById(R.id.atsakingo_pareigos);
                 EditText vp = (EditText) findViewById(R.id.atsakingo_vp);
                 EditText pastabos = (EditText) findViewById(R.id.pastabos);
+
+                generatePDF();
+
 
                 Log.v("EditText", "Juridinio asmens pavadinimas: " + pavadinimas.getText().toString());
                 Log.v("EditText", "kodas: " + kodas.getText().toString());
@@ -92,4 +109,58 @@ public class Kirpykla extends AppCompatActivity {
             klausimai.addView(view);
         }
     }
+
+
+
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    private void generatePDF() {
+
+        EditText imone = (EditText)findViewById(R.id.pavadinimas);
+        EditText kodas = (EditText)findViewById(R.id.kodas);
+        EditText adresas = (EditText) findViewById(R.id.adresas);
+        EditText tel = (EditText)findViewById(R.id.tel_nr);
+        EditText mail = (EditText)findViewById(R.id.el_pastas);
+        EditText pareigos = (EditText) findViewById(R.id.atsakingo_pareigos);
+        EditText vardaspav = (EditText)findViewById(R.id.atsakingo_vp);
+        EditText pastabos = (EditText)findViewById(R.id.pastabos);
+        generatePDF(imone, kodas, adresas, tel, mail, pareigos, vardaspav, pastabos);
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    private void generatePDF(EditText imone, EditText kodas, EditText adresas, EditText tel, EditText mail, EditText pareigos, EditText vardaspav, EditText pastabos) {
+        String fullPath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS).getAbsolutePath()
+                + "/kirpykla.pdf";
+
+        SimpleDateFormat dateFormat = null;
+        dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+
+
+        File file = new File(fullPath);
+        try {
+            PdfWriter pdfWriter = new PdfWriter(new FileOutputStream(file));
+            PdfDocument pdfDocument = new PdfDocument(pdfWriter);
+            Document document = new Document(pdfDocument);
+            document.add(
+                    new Paragraph()
+                            .setFontSize(20)
+                            .setBold()
+                            .setTextAlignment(TextAlignment.CENTER)
+                            .add(new Text("Kirpyklos patikrinimo aktas")));
+            document.add(new Paragraph("Juridinio asmens pavadinimas: " +imone.getText().toString()));
+            document.add(new Paragraph("Imones kodas: "+ kodas.getText().toString()));
+            document.add(new Paragraph("Veiklos vykdymo adresas: " + adresas.getText().toString()));
+            document.add(new Paragraph("Telefono numeris: "+ tel.getText().toString()));
+            document.add(new Paragraph("El. pastas: " + mail.getText().toString()));
+            document.add(new Paragraph("Atsakingo asmens pareigos: " + pareigos.getText().toString()));
+            document.add(new Paragraph("Vardas pavarde: " + vardaspav.getText().toString()));
+            document.add(new Paragraph("Pastabos " + pastabos.getText().toString()));
+            document.add(new Paragraph("Patikrinimas baigtas: " + dateFormat.format(dateStarted).toString()));
+
+            document.close();
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
 }

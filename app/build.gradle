@@ -1,11 +1,29 @@
 apply plugin: 'com.android.application'
 
+
+
 android {
+    packagingOptions {
+        exclude 'com/itextpdf/io/font/cmap_info.txt'
+        exclude 'com/itextpdf/io/font/cmap/MSungStd-Light.properties'
+        exclude 'com/itextpdf/io/font/cmap/STSong-Light.properties'
+        exclude 'com/itextpdf/io/font/cmap/HYSMyeongJoStd-Medium.properties'
+        exclude 'com/itextpdf/io/font/cmap/MSung-Light.properties'
+        exclude 'com/itextpdf/io/font/cmap/STSongStd-Light.properties'
+        exclude 'com/itextpdf/io/font/cmap/HYGoThic-Medium.properties'
+        exclude 'com/itextpdf/io/font/cmap/HYSMyeongJo-Medium.properties'
+        exclude 'com/itextpdf/io/font/cmap/KozMinPro-Regular.properties'
+        exclude 'com/itextpdf/io/font/cmap/MHei-Medium.properties'
+        exclude 'com/itextpdf/io/font/cmap/HeiseiMin-W3.properties'
+        exclude 'com/itextpdf/io/font/cmap/HeiseiKakuGo-W5.properties'
+        exclude 'com/itextpdf/io/font/cmap/cjk_registry.properties'
+    }
+
     compileSdkVersion 25
     buildToolsVersion "26.0.2"
     defaultConfig {
         applicationId "com.example.aurimas.inspektorius"
-        minSdkVersion 15
+        minSdkVersion 20
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -20,6 +38,7 @@ android {
 }
 
 dependencies {
+    compile 'com.itextpdf:itext7-core:7.0.2'
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
