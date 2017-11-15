@@ -178,7 +178,7 @@ public class MainActivity extends AppCompatActivity {
         dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 
         String fullPath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS).getAbsolutePath()
-                + "/kontrole.pdf";
+                + "/kontrole-"+System.currentTimeMillis()+".pdf";
 
         File file = new File(fullPath);
 

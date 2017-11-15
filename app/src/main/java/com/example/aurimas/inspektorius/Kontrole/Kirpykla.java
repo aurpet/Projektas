@@ -69,25 +69,10 @@ public class Kirpykla extends AppCompatActivity {
                 EditText vp = (EditText) findViewById(R.id.atsakingo_vp);
                 EditText pastabos = (EditText) findViewById(R.id.pastabos);
 
-                generatePDF();
+                generatePDF(kl);
 
 
-                Log.v("EditText", "Juridinio asmens pavadinimas: " + pavadinimas.getText().toString());
-                Log.v("EditText", "kodas: " + kodas.getText().toString());
-                Log.v("EditText", "Adresas: " + adresas.getText().toString());
-                Log.v("EditText", "Telefonas: " + tel.getText().toString());
-                Log.v("EditText", "El. paštas: " + mail.getText().toString());
 
-                for (Klausimas klausimas : kl) {
-                    if (Atsakymas.NE == klausimas.getAtsakymas()) {
-                        Log.d("kirpykla", "HN 117:2007 " + getString(klausimas.getPunktas()) + " p.");
-                    }
-                }
-
-                Log.v("EditText", "Pastabos: " + pastabos.getText().toString());
-                Log.v("kirpykla", "Patikrinimas baigtas: " + dateEnded.toString());
-                Log.v("EditText", "Atsakingo asmens pareigos: " + pareigos.getText().toString());
-                Log.v("EditText", "Vardas Pavardė: " + vp.getText().toString());
             }
         });
 
@@ -113,7 +98,7 @@ public class Kirpykla extends AppCompatActivity {
 
 
     @RequiresApi(api = Build.VERSION_CODES.N)
-    private void generatePDF() {
+    private void generatePDF(ArrayList<Klausimas> kl) {
 
         EditText imone = (EditText)findViewById(R.id.pavadinimas);
         EditText kodas = (EditText)findViewById(R.id.kodas);
@@ -123,13 +108,13 @@ public class Kirpykla extends AppCompatActivity {
         EditText pareigos = (EditText) findViewById(R.id.atsakingo_pareigos);
         EditText vardaspav = (EditText)findViewById(R.id.atsakingo_vp);
         EditText pastabos = (EditText)findViewById(R.id.pastabos);
-        generatePDF(imone, kodas, adresas, tel, mail, pareigos, vardaspav, pastabos);
+        generatePDF(kl, imone, kodas, adresas, tel, mail, pareigos, vardaspav, pastabos);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
-    private void generatePDF(EditText imone, EditText kodas, EditText adresas, EditText tel, EditText mail, EditText pareigos, EditText vardaspav, EditText pastabos) {
+    private void generatePDF(ArrayList<Klausimas> kl, EditText imone, EditText kodas, EditText adresas, EditText tel, EditText mail, EditText pareigos, EditText vardaspav, EditText pastabos) {
         String fullPath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS).getAbsolutePath()
-                + "/kirpykla.pdf";
+                + "/kirpykla-"+System.currentTimeMillis()+".pdf";
 
         SimpleDateFormat dateFormat = null;
         dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
@@ -155,6 +140,15 @@ public class Kirpykla extends AppCompatActivity {
             document.add(new Paragraph("Vardas pavarde: " + vardaspav.getText().toString()));
             document.add(new Paragraph("Pastabos " + pastabos.getText().toString()));
             document.add(new Paragraph("Patikrinimas baigtas: " + dateFormat.format(dateStarted).toString()));
+
+
+            for (Klausimas klausimas : kl) {
+                document.add(new Paragraph("Klausimas: " + getString(klausimas.getKlausimas())));
+                document.add(new Paragraph("Atsakymas: " + klausimas.getAtsakymas().name()));
+                if (Atsakymas.NE == klausimas.getAtsakymas()) {
+                    document.add(new Paragraph("Pazeidimas: " + getString(klausimas.getPunktas()) + " p."));
+                }
+            }
 
             document.close();
 
